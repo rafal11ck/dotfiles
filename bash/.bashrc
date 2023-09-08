@@ -2,7 +2,7 @@
 # ~/.bashrc
 #
 
-export PATH="$PATH:~/.config/emacs/bin/"
+export PATH="$PATH:~/.config/emacs/bin/:~/scripts/desktop"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -12,4 +12,4 @@ alias grep='grep --color=auto'
 
 alias zathura='setsid zathura'
 
-PS1='[\u@\h \W]\$ '
+eval "$(starship init bash)"
