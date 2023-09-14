@@ -2,7 +2,7 @@
 # ~/.bashrc
 #
 
-export PATH="$PATH:~/.config/emacs/bin/:~/scripts/desktop"
+export PATH="$PATH:~/.local/bin/:~/.config/emacs/bin/:~/scripts/desktop"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return

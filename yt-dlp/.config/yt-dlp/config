@@ -7,3 +7,6 @@
 --sub-lang pl
 #embed subs
 --embed-subs
+
+--embed-metadata
+-o "%(playlist_index)s. %(title)s.%(ext)s"
