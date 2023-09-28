@@ -4,3 +4,4 @@
 gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
 gsettings set org.gnome.desktop.interface gtk-theme Pop-dark
 export GTK_THEME=Pop-dark
+export QT_QPA_PLATFORMTHEME=qt5ct
