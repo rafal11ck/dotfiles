@@ -81,5 +81,7 @@
 
 
 (setq doom-font (font-spec :family "Liberation Mono" :size 17)
-     doom-variable-pitch-font (font-spec :family "Liberation Mono" :size 17)
-     doom-big-font (font-spec :family "Liberation Mono" :size 23))
+      doom-variable-pitch-font (font-spec :family "Liberation Mono" :size 17)
+      doom-big-font (font-spec :family "Liberation Mono" :size 23))
+
+;;(add-hook 'after-init-hook #'global-flycheck-mode)
