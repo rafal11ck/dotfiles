@@ -6,4 +6,4 @@ export GTK_THEME=Pop-dark
 gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
 gsettings set org.gnome.desktop.interface gtk-theme Pop-dark
 
-notify-send -t 2000 'theme fixed'
+notify-send -t 15000 'theme fixed'
