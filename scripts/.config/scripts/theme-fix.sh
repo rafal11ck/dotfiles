@@ -1,7 +1,9 @@
 #!/bin/sh
-#fixes GTK theme
+
+#export QT_QPA_PLATFORMTHEME=qt6ct
+export GTK_THEME=Pop-dark
 
 gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
 gsettings set org.gnome.desktop.interface gtk-theme Pop-dark
-export GTK_THEME=Pop-dark
-export QT_QPA_PLATFORMTHEME=qt5ct
+
+notify-send -t 2000 'theme fixed'
