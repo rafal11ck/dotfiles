@@ -1,7 +1,7 @@
 format = """
-[](#009161)\
-$hostname(fg:#DA627D bg:#009161)\
-[](fg:#009161 bg:#DA627D )\
+[](#5F00D3)\
+$hostname(fg:#DA627D bg:#5F00D3)\
+[](fg:#5F00D3 bg:#DA627D )\
 $directory\
 [](fg:#DA627D bg:#FCA17D)\
 $git_branch\
@@ -25,9 +25,9 @@ $docker_context\
 $time\
 [ ](fg:#33658A)\
 \n\
-[](fg:#009161)\
+[](fg:#5F00D3)\
 $username\
-[ ](fg:#009161)\
+[ ](fg:#5F00D3)\
 """
 
 # Disable the blank line at the start of the prompt
@@ -37,8 +37,8 @@ $username\
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#009161"
-style_root = "bg:#009161"
+style_user = "bg:#5F00D3"
+style_root = "bg:#5F00D3"
 format = '[$user ]($style)'
 disabled = false
 
@@ -50,7 +50,7 @@ disabled = false # Disabled by default
 
 [hostname]
 ssh_only=false
-style = "bg:#009161"
+style = "bg:#5F00D3"
 format='[$ssh_symbol$hostname]($style)'
 
 [directory]
