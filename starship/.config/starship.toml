@@ -51,7 +51,7 @@ disabled = false # Disabled by default
 [hostname]
 ssh_only=false
 style = "bg:#5F00D3"
-format='[$ssh_symbol$hostname]($style)'
+format='[$ssh_symbol$hostname ]($style)'
 
 [directory]
 style = "bg:#DA627D"
