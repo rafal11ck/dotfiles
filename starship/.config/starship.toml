@@ -1,5 +1,7 @@
 format = """
-[](#DA627D)\
+[](#009161)\
+$hostname(fg:#DA627D bg:#009161)\
+[](fg:#009161 bg:#DA627D )\
 $directory\
 [](fg:#DA627D bg:#FCA17D)\
 $git_branch\
@@ -23,9 +25,9 @@ $docker_context\
 $time\
 [ ](fg:#33658A)\
 \n\
-[](fg:#DA527D)\
+[](fg:#009161)\
 $username\
-[ ](fg:#DA527D)\
+[ ](fg:#009161)\
 """
 
 # Disable the blank line at the start of the prompt
@@ -35,8 +37,8 @@ $username\
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#DA527D"
-style_root = "bg:#DA527D"
+style_user = "bg:#009161"
+style_root = "bg:#009161"
 format = '[$user ]($style)'
 disabled = false
 
@@ -45,6 +47,11 @@ disabled = false
 [os]
 style = "bg:#9A348E"
 disabled = false # Disabled by default
+
+[hostname]
+ssh_only=false
+style = "bg:#009161"
+format='[$ssh_symbol$hostname]($style)'
 
 [directory]
 style = "bg:#DA627D"
@@ -143,3 +150,4 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
 format = '[ $time ]($style)'
+
