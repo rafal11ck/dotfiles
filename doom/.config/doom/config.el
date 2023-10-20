@@ -85,3 +85,5 @@
       doom-big-font (font-spec :family "Liberation Mono" :size 23))
 
 ;;(add-hook 'after-init-hook #'global-flycheck-mode)
+
+;;(setq org-latex-listings 't)
