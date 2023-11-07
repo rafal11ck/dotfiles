@@ -8,5 +8,4 @@ export HISTFILESIZE=-1
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-
-[[ ! $SSH_TTY ]] && [[ -f ~/startw ]] && . ~/startw
+[[ ${XDG_SESSION_TYPE} = "tty" ]] && [[ ${XDG_VTNR} = 1 ]] && [[ -f ~/startw ]] && ~/startw
