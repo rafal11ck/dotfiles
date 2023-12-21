@@ -87,3 +87,5 @@
 ;;(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;;(setq org-latex-listings 't)
+
+(require 'ox-man)
