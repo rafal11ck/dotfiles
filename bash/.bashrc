@@ -4,7 +4,7 @@
 
 export PATH="$PATH:~/.local/bin/:~/.config/emacs/bin/:~/scripts/desktop"
 export EDITOR="nvim"
-export VISUAL="nvim"
+export VISUAL="emacs"
 
 
 # If not running interactively, don't do anything
@@ -28,7 +28,6 @@ fi
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
 alias zathura='setsid zathura'
 
 eval "$(starship init bash)"
