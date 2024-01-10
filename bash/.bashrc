@@ -4,7 +4,7 @@
 
 export PATH="$PATH:~/.local/bin/:~/.config/emacs/bin/:~/scripts/desktop"
 export EDITOR="nvim"
-export VISUAL="emacs"
+export VISUAL="emacsclient"
 
 
 # If not running interactively, don't do anything
