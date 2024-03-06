@@ -10,6 +10,9 @@ export VISUAL="emacsclient"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+source /usr/share/fzf/completion.bash
+source /usr/share/fzf/key-bindings.bash
+
 ranger() {
     if [ -z "$RANGER_LEVEL" ]; then
         /usr/bin/ranger "$@"
