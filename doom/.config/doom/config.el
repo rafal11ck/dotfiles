@@ -84,6 +84,12 @@
       doom-variable-pitch-font (font-spec :family "Liberation Mono" :size 17)
       doom-big-font (font-spec :family "Liberation Mono" :size 23))
 
+(setq org-latex-src-block-backend 'minted
+      org-latex-packages-alist '(("" "minted"))
+      org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+
 ;;(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;;(setq org-latex-listings 't)
