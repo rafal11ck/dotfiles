@@ -90,10 +90,40 @@
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
+(setq lsp-clients-clangd-args '("-j=3"
+				"--background-index"
+				"--clang-tidy"
+				"--completion-style=detailed"
+				"--header-insertion=never"
+				"--header-insertion-decorators=0"))
+(after! lsp-clangd (set-lsp-priority! 'clangd 2))
+
+(require 'srefactor)
+
 (require 'dap-cpptools)
 
 ;;(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;;(setq org-latex-listings 't)
+
+
+;; C / C++ code generation
+(require 'srefactor)
+(require 'srefactor-lisp)
+(define-key c-mode-map (kbd "M-RET") 'srefactor-refactor-at-point)
+(define-key c++-mode-map (kbd "M-RET") 'srefactor-refactor-at-point)
+(global-set-key (kbd "M-RET o") 'srefactor-lisp-one-line)
+(global-set-key (kbd "M-RET m") 'srefactor-lisp-format-sexp)
+(global-set-key (kbd "M-RET d") 'srefactor-lisp-format-defun)
+(global-set-key (kbd "M-RET b") 'srefactor-lisp-format-buffer)
+
+
+
+(setq lsp-ui-sideline-enable t)
+(setq global-whitespace-mode nil)
+
+(after! lsp-ui
+  (setq lsp-ui-doc-enable t))
+
 
 (require 'ox-man)
