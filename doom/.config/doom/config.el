@@ -90,6 +90,8 @@
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
+(require 'dap-cpptools)
+
 ;;(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;;(setq org-latex-listings 't)
