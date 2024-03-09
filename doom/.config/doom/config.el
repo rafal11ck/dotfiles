@@ -126,4 +126,7 @@
   (setq lsp-ui-doc-enable t))
 
 
+(after! lsp-ui
+  (setq lsp-ui-doc-show-with-cursor t))
+
 (require 'ox-man)
