@@ -122,11 +122,11 @@
 (setq lsp-ui-sideline-enable t)
 (setq global-whitespace-mode nil)
 
-(after! lsp-ui
-  (setq lsp-ui-doc-enable t))
 
-
-(after! lsp-ui
-  (setq lsp-ui-doc-show-with-cursor t))
+;;;;lsp doc popup
+;;(after! lsp-ui
+;;  (setq lsp-ui-doc-enable t))
+;;(after! lsp-ui
+;;  (setq lsp-ui-doc-show-with-cursor t))
 
 (require 'ox-man)
