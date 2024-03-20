@@ -5,7 +5,7 @@
 export PATH="$PATH:~/.local/bin/:~/.config/emacs/bin/:~/scripts/desktop"
 export EDITOR="nvim"
 export VISUAL="emacsclient -nw"
-
+export LESSCHARSET="utf-8"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -13,13 +13,13 @@ export VISUAL="emacsclient -nw"
 source /usr/share/fzf/completion.bash
 source /usr/share/fzf/key-bindings.bash
 
-ranger() {
-    if [ -z "$RANGER_LEVEL" ]; then
-        /usr/bin/ranger "$@"
-    else
-        exit
-    fi
-}
+#ranger() {
+#    if [ -z "$RANGER_LEVEL" ]; then
+#        /usr/bin/ranger "$@"
+#    else
+#        exit
+#    fi
+#}
 
 #ssh agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
