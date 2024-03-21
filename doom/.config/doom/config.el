@@ -90,15 +90,7 @@
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
-(setq lsp-clients-clangd-args '("-j=3"
-				"--background-index"
-				"--clang-tidy"
-				"--completion-style=detailed"
-				"--header-insertion=never"
-				"--header-insertion-decorators=0"))
-(after! lsp-clangd (set-lsp-priority! 'clangd 2))
 
-(require 'srefactor)
 
 (require 'dap-cpptools)
 
@@ -110,6 +102,17 @@
 (setq lsp-ui-sideline-enable t)
 (setq global-whitespace-mode nil)
 
+(setq lsp-clients-clangd-args '("-j=3"
+				"--background-index"
+				"--clang-tidy"
+				"--completion-style=detailed"
+				"--header-insertion=never"
+				"--header-insertion-decorators=0"))
+(after! lsp-clangd (set-lsp-priority! 'clangd 2))
+
+(after! ccls
+  (setq ccls-initialization-options '(:index (:comments 2) :completion (:detailedLabel t)))
+  (set-lsp-priority! 'ccls 1)) ; optional as ccls is the default in Doom
 
 ;;;;lsp doc popup
 ;;(after! lsp-ui
