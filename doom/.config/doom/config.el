@@ -112,7 +112,7 @@
 
 (after! ccls
   (setq ccls-initialization-options '(:index (:comments 2) :completion (:detailedLabel t)))
-  (set-lsp-priority! 'ccls 1)) ; optional as ccls is the default in Doom
+  (set-lsp-priority! 'ccls 3)) ; optional as ccls is the default in Doom
 
 ;;;;lsp doc popup
 ;;(after! lsp-ui
@@ -121,3 +121,5 @@
 ;;  (setq lsp-ui-doc-show-with-cursor t))
 
 (require 'ox-man)
+
+(setq +latex-viewers '(zathura))
