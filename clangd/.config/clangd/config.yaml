@@ -1,8 +1,8 @@
-If:
-  PathMatch: [.*\.c, .*\.h]
-CompileFlags:
-  Add:
-    - "-std=c11"
+#If:
+#  PathMatch: [.*\.c, .*\.h]
+#CompileFlags:
+#  Add:
+#    - "-std=c11"
 ---
 If:
   PathExclude: [.*\.c, .*\.h]
