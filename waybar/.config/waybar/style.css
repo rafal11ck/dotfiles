@@ -337,6 +337,8 @@ window#waybar.hidden {
 #pulseaudio,
 #network,
 #clock,
+#mpd,
+#idle_inhibitor,
 #tray {
     border-radius: 4px;
     margin: 6px 3px;
@@ -422,4 +424,30 @@ tooltip label {
 #cpu {
     background-color: #2ecc71;
     color: #000000;
+}
+
+#mpd {
+    background-color: #66cc99;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+#idle_inhibitor {
+    background-color: #3d4456;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
 }
