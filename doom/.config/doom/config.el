@@ -114,6 +114,8 @@
   (setq ccls-initialization-options '(:index (:comments 2) :completion (:detailedLabel t)))
   (set-lsp-priority! 'ccls 1)) ; optional as ccls is the default in Doom
 
+(setq apheleia-global-mode nil)
+
 ;;;;lsp doc popup
 ;;(after! lsp-ui
 ;;  (setq lsp-ui-doc-enable t))
