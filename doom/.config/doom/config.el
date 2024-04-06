@@ -116,6 +116,13 @@
 
 (setq apheleia-global-mode nil)
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((mermaid . t)
+   (scheme . t)
+   (your-other-langs . t)))
+
+
 ;;;;lsp doc popup
 ;;(after! lsp-ui
 ;;  (setq lsp-ui-doc-enable t))
