@@ -129,6 +129,17 @@
 ;;(after! lsp-ui
 ;;  (setq lsp-ui-doc-show-with-cursor t))
 
+
+(after! flyspell
+  (setq flyspell-lazy-idle-seconds 2)
+  (setq ispell-program-name "hunspell")
+  (setq ispell-dictionary "en_US,polish")
+  ;; ispell-set-spellchecker-params has to be called
+  ;; before ispell-hunspell-add-multi-dic will work
+  (ispell-set-spellchecker-params)
+  (ispell-hunspell-add-multi-dic "en_US,polish"))
+
+
 (require 'ox-man)
 
 (setq +latex-viewers '(zathura))
