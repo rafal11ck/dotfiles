@@ -2,7 +2,7 @@
 # ~/.bashrc
 #
 
-export PATH="$PATH:~/.local/bin/:~/.config/emacs/bin/:~/scripts/desktop:~/scripts/wayland"
+export PATH="$PATH:~/.local/bin/:~/.config/emacs/bin/:~/scripts/desktop:~/scripts/wayland:~/go/bin"
 export EDITOR="nvim"
 export VISUAL="emacsclient -nw"
 export LESSCHARSET="utf-8"
