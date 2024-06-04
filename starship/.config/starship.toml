@@ -1,7 +1,9 @@
 format = """
 [](#5F00D3)\
 $hostname(fg:#DA627D bg:#5F00D3)\
-[](fg:#5F00D3 bg:#DA627D )\
+[](fg:#5F00D3 bg:#E600E6)\
+$cmd_duration\
+[](fg:#E600E6 bg:#DA627D)\
 $directory\
 [](fg:#DA627D bg:#FCA17D)\
 $git_branch\
@@ -151,3 +153,7 @@ time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
 format = '[ $time ]($style)'
 
+[cmd_duration]
+style = "bg:#E600E6"
+format='[took $duration]($style)'
+show_notifications=true
