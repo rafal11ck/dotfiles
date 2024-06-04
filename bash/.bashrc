@@ -6,6 +6,8 @@ export PATH="$PATH:~/.local/bin/:~/.config/emacs/bin/:~/scripts/desktop:~/script
 export EDITOR="nvim"
 export VISUAL="emacsclient -nw"
 export LESSCHARSET="utf-8"
+# Fix jellyfin media player on wyland
+export QTWEBENGINE_CHROMIUM_FLAGS="--disable-gpu"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
