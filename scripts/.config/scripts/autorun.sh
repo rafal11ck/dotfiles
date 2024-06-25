@@ -11,4 +11,6 @@ setsid /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 2>&1 > /dev/nul
 
 setsid play-with-mpv 2>&1 > /dev/null &
 
+setsid SVPmanager 2>&1 > dev/null &
+
 notify-send -t 30000 'autorun done'
