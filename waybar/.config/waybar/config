@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "backlight", "keyboard-state", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["mpd", "custom/nightmode", "idle_inhibitor", "pulseaudio", "network", "cpu", "backlight", "keyboard-state", "battery", "battery#bat2", "clock", "tray"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -138,6 +138,16 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/nightmode": {
+        "what": "night light mode",
+        "format": "{icon}",
+        "format-icons": {
+            "default": "🕶",
+            "deactivated": "🕶",
+            "activated": "🌅"
+        },
+        "on-click": "$HOME/scripts/wayland/nightmode.sh"
+        }
     }
 }
-
