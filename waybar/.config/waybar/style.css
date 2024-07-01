@@ -83,7 +83,7 @@ window#waybar.hidden {
     color: #ffffff;
 }
 
-#custom-nightmode:active {
+#custom-nightmode.active {
     background-color: #212983;
     color: #00ffff;
 }

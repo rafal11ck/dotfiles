@@ -17,6 +17,10 @@
             "unlocked": ""
         }
     },
+    "custom/nightmode":{
+        "format": "🕶",
+        "on-click": "$HOME/.config/scripts/nightmode.sh"
+    },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format-disconnected": "Disconnected ",
@@ -82,7 +86,6 @@
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "on-click": "nightmode.sh"
     },
     "battery": {
         "states": {
@@ -139,15 +142,4 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-    "custom/nightmode": {
-        "what": "night light mode",
-        "format": "{icon}",
-        "format-icons": {
-            "default": "🕶",
-            "deactivated": "🕶",
-            "activated": "🌅"
-        },
-        "on-click": "$HOME/scripts/wayland/nightmode.sh"
-        }
-    }
 }
