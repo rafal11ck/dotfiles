@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
-set -e
+set -xe
 
 cd "$HOME/.config/jellyfin-mpv-shim"
 cp "$(fd -e json . cred | fzf)" cred.json
+pkill -xf jellyfin-mpv-shim || true
+setsid -f 'jellyfin-mpv-shim'
