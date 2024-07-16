@@ -3,5 +3,5 @@ set -xe
 
 cd "$HOME/.config/jellyfin-mpv-shim"
 cp "$(fd -e json . cred | fzf)" cred.json
-pkill -xf jellyfin-mpv-shim || true
+pkill -f python.*jellyfin-mpv-shim || true
 setsid -f 'jellyfin-mpv-shim'
