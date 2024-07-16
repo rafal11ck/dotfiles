@@ -102,6 +102,7 @@
 (setq lsp-ui-sideline-enable t)
 (setq global-whitespace-mode nil)
 
+
 (setq lsp-clients-clangd-args '("-j=3"
 				"--background-index"
 				"--clang-tidy"
@@ -112,7 +113,7 @@
 
 (after! ccls
   (setq ccls-initialization-options '(:index (:comments 2) :completion (:detailedLabel t)))
-  (set-lsp-priority! 'ccls 1)) ; optional as ccls is the default in Doom
+  (set-lsp-priority! 'ccls 3)) ; optional as ccls is the default in Doom
 
 (setq apheleia-global-mode nil)
 
