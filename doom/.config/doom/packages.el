@@ -51,3 +51,5 @@
 
 (package! yuck-mode)
 (package! mermaid-mode)
+
+(package! doom-snippets :ignore t)
