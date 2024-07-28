@@ -1,16 +1,16 @@
 #!/bin/sh
 
-sleep 1s;
+#Script auotorunning user apps
+
 
 #jellyfin client mpv
-setsid jellyfin-mpv-shim 2>&1 > /dev/null || notify-send 'jellyfin-mpv-shim fail'&
+(jellyfin-mpv-shim > /dev/null 2>&1 || notify-send "$0" 'jellyfin-mpv-shim failed')&
 
-#polkit
-setsid /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 2>&1 > /dev/null &
+#browseer extension
+(play-with-mpv > /dev/null 2>&1 || notify-send "$0" "play-with-mpv failed" )&
+
+# SVP
+(SVPmanager > dev/null 2>&1 || notify-send "$0" "SVPmanager failed")
 
 
-setsid play-with-mpv 2>&1 > /dev/null &
-
-setsid SVPmanager 2>&1 > dev/null &
-
-notify-send -t 30000 'autorun done'
+#

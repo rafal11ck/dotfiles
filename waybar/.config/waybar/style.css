@@ -9,8 +9,8 @@
     border-radius: 0;
     min-height: 0;
     font-family:
-        Material Design Icons,
-        JetBrainsMono Nerd Font;
+        JetBrainsMono Nerd Font monospace,
+        Material Design Icons;
     font-size: 13px;
 }
 
@@ -55,6 +55,7 @@ window#waybar.hidden {
     background-color: #f38ba8;
 }
 
+button,
 #cpu,
 #memory,
 #custom-power,
@@ -65,17 +66,26 @@ window#waybar.hidden {
 #network,
 #clock,
 #mpd,
+#mpris,
 #idle_inhibitor,
-#tray {
-    border-radius: 4px;
-    margin: 6px 3px;
-    padding: 6px 12px;
-    background-color: #1e1e2e;
-    color: #181825;
+#tray,
+#custom-notification {
+    border-radius: 13px;
+    margin: 6px 4px;
+    padding: 8px 8px;
+    background-color: white;
+    color: black;
+    min-width: 20px;
+    min-height: 20px;
 }
 
-#custom-power {
-    margin-right: 6px;
+#tray {
+    background-color: black;
+}
+
+#custom-notification {
+    color: white;
+    background-color: black;
 }
 
 #custom-nightmode {
@@ -83,7 +93,7 @@ window#waybar.hidden {
     color: #ffffff;
 }
 
-#custom-nightmode.active {
+#custom-nightmode#active {
     background-color: #212983;
     color: #00ffff;
 }
@@ -121,8 +131,14 @@ window#waybar.hidden {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
 #battery.charging {
     background-color: #a6e3a1;
+}
+
+#mpris {
+    background-color: #303030;
+    color: #cacaca;
 }
 
 #backlight {
@@ -139,7 +155,6 @@ window#waybar.hidden {
 }
 
 #clock {
-    font-family: JetBrainsMono Nerd Font;
     background-color: #cba6f7;
 }
 
