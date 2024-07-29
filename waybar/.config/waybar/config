@@ -7,16 +7,12 @@
   // Choose the order of the modules
   "modules-left": [
     "hyprland/workspaces",
-    "sway/mode",
-    "sway/scratchpad",
     "custom/media"
   ],
   "modules-center": [
-    "sway/window",
-    "mpris"
+    "custom/notification",
   ],
   "modules-right": [
-    "mpd",
     "custom/nightmode",
     "idle_inhibitor",
     "pulseaudio",
@@ -28,7 +24,6 @@
     "battery#bat2",
     "clock",
     "tray",
-    "custom/notification"
   ],
   "keyboard-state": {
     "numlock": true,
@@ -54,32 +49,6 @@
       "paused": "⏸"
     }
     //,"ignored-players": ["firefox"]
-  },
-  "mpd": {
-    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-    "format-disconnected": "Disconnected ",
-    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-    "unknown-tag": "N/A",
-    "interval": 2,
-    "consume-icons": {
-      "on": " "
-    },
-    "random-icons": {
-      "off": "<span color=\"#f53c3c\"></span> ",
-      "on": " "
-    },
-    "repeat-icons": {
-      "on": " "
-    },
-    "single-icons": {
-      "on": "1 "
-    },
-    "state-icons": {
-      "paused": "",
-      "playing": ""
-    },
-    "tooltip-format": "MPD (connected)",
-    "tooltip-format-disconnected": "MPD (disconnected)"
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -205,9 +174,9 @@
     "format": "{icon}",
     "format-icons": {
       "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
-      "none": " ",
+      "none": "",
       "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
-      "dnd-none": " "
+      "dnd-none": ""
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -215,5 +184,13 @@
     "on-click": "sleep 0.1 && swaync-client -t -sw",
     "on-click-right": "sleep 0.1 && swaync-client -d -sw",
     "escape": true
-  }
+  },
+  "custom/nightmode": {
+    "format": "{icon}",
+    "format-alt": "{ACT",
+    "format-icons": {
+      "default": "",
+    },
+    "on-click": "$HOME/.config/scripts/nightmode.sh"
+  },
 }

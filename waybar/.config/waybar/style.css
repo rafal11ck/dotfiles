@@ -1,17 +1,16 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-}
-
-* {
     border: none;
     border-radius: 0;
     min-height: 0;
     font-family:
-        JetBrainsMono Nerd Font monospace,
+        FontAwesome,
         Material Design Icons;
-    font-size: 13px;
+    /* sans-serif;
+        // Roboto,
+        // Helvetica,
+        // Arial;
+        */
+    font-size: 14px;
 }
 
 window#waybar {
@@ -139,6 +138,10 @@ button,
 #mpris {
     background-color: #303030;
     color: #cacaca;
+    min-height: 30px;
+    border-radius: 13px;
+    margin: 6px 6px;
+    padding: 8px 8px;
 }
 
 #backlight {
