@@ -170,12 +170,14 @@
     "escape": true
   },
   "custom/nightmode": {
-    //"return-type": "json",
-    "format": "{icon} {}",
+    "format": "{icon}",
     "format-icons": {
-      "deactivated": "",
-      "activated": ""
+      "off": "",
+      "on": ""
     },
-    "on-click": "$HOME/.config/scripts/nightmode.sh"
+    "exec": "/home/rafal/.config/scripts/nightmode.sh --status",
+    "on-click": "/home/rafal/.config/scripts/nightmode.sh --toggle",
+    "return-type": "json",
+    "signal": 9
   },
 }

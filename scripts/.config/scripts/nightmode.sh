@@ -1,33 +1,46 @@
 #!/bin/sh
 
+toggle()
+{
+    pkill gammastep >/dev/null 2>&1 || setsid -f gammastep -O 3700 >/dev/null 2>&1
+    pkill -RTMIN+9 waybar
+}
 
-if [ -z "$(pidof gammastep)" ]; then
-    text="";
-    tooltip="activate nightmode"
-    procentage="100"
-    gammastep -O 3700 > /dev/null 2>&1 &
-else
-    text="";
+status()
+{
+  if pgrep gammastep >/dev/null; then
+    alt="on"
     tooltip="deactivate nightmode"
-    class="active"
-    procentage="0"
-    kill -9 "$(pidof gammastep)"
-fi
+    class="activated"
+  else
+    alt="off"
+    tooltip="activate nightmode"
+  fi
+  echo "{ \"alt\" : \"$alt\", \"tooltip\" : \"$tooltip\", \"class\" : \"$class\" }"
+}
 
 
-echo "$text"
-echo "$tooltip"
-echo "$class"
-echo "$procentage"
+help()
+{
+echo "Usage:
+     --status   get status in json
+     --toggle   toggle
+     --help     show this message
+"
+}
 
+# Ensure only one flag is passed
+[ $# -ge 2 ] && (help ; exit)
 
-exit
-
-result="$( jq -n \
-    --arg text "$text" \
-    --arg tooltip "$tooltip" \
-    --arg class "$class" \
-    --arg procentage "$procentage" \
-    '{"text": $text, "tooltip": $tooltip, "class": $class , "procentage": $procentage }' )"
-
-echo "$result"
+case "$1" in
+  "--status")
+    status
+    ;;
+  "--toggle")
+    toggle
+    ;;
+  "--help" | *)
+    help
+    exit
+    ;;
+esac
