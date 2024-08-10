@@ -10,7 +10,7 @@
 (play-with-mpv > /dev/null 2>&1 || notify-send "$0" "play-with-mpv failed" )&
 
 # SVP
-(SVPmanager > dev/null 2>&1 || notify-send "$0" "SVPmanager failed")
+(sleep 2s ; SVPmanager > dev/null 2>&1 || notify-send "$0" "SVPmanager failed")
 
 
 #
