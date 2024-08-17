@@ -156,4 +156,4 @@ format = '[ $time ]($style)'
 [cmd_duration]
 style = "bg:#E600E6"
 format='[took $duration]($style)'
-show_notifications=true
+show_notifications=false
